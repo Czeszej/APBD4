@@ -32,9 +32,9 @@ public class VisitsController : ControllerBase
 
     //
     [HttpPost]
-    public IActionResult CreateVisitById([FromBody] Visit visit) { 
+    public IActionResult CreateVisitById([FromBody] VisitDto visitDto) { 
     
-        _visits.Add(visit);
+        _visits.Add(new Visit(visitDto.animalId, visitDto.date, visitDto.treatment,visitDto.cost) );
         return StatusCode(StatusCodes.Status201Created);
 
     }

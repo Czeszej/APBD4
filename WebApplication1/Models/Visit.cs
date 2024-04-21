@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Text.Json.Serialization;
 using WebApplication1.Controllers;
 
 namespace WebApplication1.Models
@@ -7,6 +8,7 @@ namespace WebApplication1.Models
     {
         public int animalId { get; set; }
         public DateTime date { get; set; }
+        
         public Animal animal { get; set; }
         public string treatment {  get; set; }
         public float cost { get; set; }
